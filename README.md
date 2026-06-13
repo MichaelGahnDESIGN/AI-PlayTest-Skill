@@ -237,6 +237,13 @@ Weitere Projekte von Michael Gahn DESIGN, die gut dazu passen:
 - [DEV-Skill](https://github.com/MichaelGahnDESIGN/DEV-Skill) für Entwicklung, Backup, Deploy, Tests und Abschlussprüfungen.
 - [Claude-Codex-MCP](https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP) für Zusammenarbeit zwischen Claude, Codex und gemeinsamen Aufgaben.
 
+## Wiki und Beispiele
+
+Ausführliche Beispiele, Checklisten, Live-Test-Regeln, Datenschutz-Hinweise und Troubleshooting findest du im Wiki-Bereich:
+
+- [docs/wiki/Home.md](docs/wiki/Home.md)
+- GitHub Wiki: <https://github.com/MichaelGahnDESIGN/AI-PlayTest-Skill/wiki>
+
 ## Lizenz
 
 MIT Lizenz. Siehe [LICENSE](LICENSE).
