@@ -57,6 +57,17 @@ Teste den Admin-Editor live. Erstelle vorher ein Backup, nutze nur temporäre Te
 
 Hinweis: `/playtest` und `/playtest-live` sind Prompt-Konventionen. Ob sie als echte Slash-Commands erscheinen, hängt von deiner Agentenumgebung ab. Der Skill reagiert auch auf normale Formulierungen wie „Mach einen lokalen Play-Test“ oder „Teste das live aus Nutzersicht“.
 
+Dieses Repository enthält zusätzlich Command-Vorlagen:
+
+```text
+.claude/commands/playtest.md
+.claude/commands/playtest-live.md
+.codex/commands/playtest.md
+.codex/commands/playtest-live.md
+```
+
+Wenn deine Umgebung lokale Command-Dateien unterstützt, können diese Vorlagen dafür sorgen, dass `/playtest` und `/playtest-live` direkter als Befehle verfügbar sind.
+
 ## Was macht der Skill?
 
 Der Agent fragt zuerst die wichtigsten Testdaten ab:
@@ -204,6 +215,24 @@ Beispiel:
 ```bash
 python3 scripts/init_playtest.py --mode live --root /pfad/zum/projekt
 ```
+
+## Optionale Kombinationen
+
+Der PlayTest-Skill funktioniert allein. Noch stärker wird er in Kombination mit spezialisierten Skills, MCP-Servern oder Browser-Werkzeugen.
+
+Empfohlen:
+
+- Superpowers-Skills für strukturierte Planung, Test-Driven Development, systematisches Debugging und Verifikation vor Abschluss.
+- Playwright oder Browser-Tools für echte UI-Flows, Screenshots, Konsolenfehler, Netzwerkfehler und Regressionstests.
+- Caveman-Skills für sehr kompakte Statusmeldungen und knappe Testauswertungen, wenn Kontext gespart werden soll.
+- Sub-Agent- oder Multi-Agent-Workflows, wenn mehrere Nutzerrollen simuliert werden sollen.
+- Projektinterne DEV-/Deploy-Skills, wenn vor Live-Tests Backup, Restore, Staging oder Deployment geprüft werden müssen.
+
+Weitere Projekte von Michael Gahn DESIGN, die gut dazu passen:
+
+- [AI-Basic-Projektordner](https://github.com/MichaelGahnDESIGN/AI-Basic-Projektordner) für eine klare Projekt- und Dokumentationsstruktur.
+- [DEV-Skill](https://github.com/MichaelGahnDESIGN/DEV-Skill) für Entwicklung, Backup, Deploy, Tests und Abschlussprüfungen.
+- [Claude-Codex-MCP](https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP) für Zusammenarbeit zwischen Claude, Codex und gemeinsamen Aufgaben.
 
 ## Lizenz
 
