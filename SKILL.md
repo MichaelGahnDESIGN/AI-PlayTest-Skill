@@ -15,8 +15,9 @@ Führe einen praxisnahen Play-Test durch: teste Funktionen nicht nur technisch, 
 
 ## Harte Regeln
 
-- Play-Test-Dateien bleiben lokal. Nie Play-Test-Protokolle, Screenshots, Tokens, Passwörter, E-Mail-Inhalte oder personenbezogene Testdetails veröffentlichen.
-- Sorge dafür, dass `PLAYTEST/` in `.gitignore` steht. Wenn das Projekt bereits `PlayTest/` nutzt, respektiere die bestehende Struktur.
+- **Lokal-only (nicht verhandelbar):** Play-Test-Branches, -Protokolle, -Screenshots und alle Test-Artefakte bleiben **ausschließlich lokal**. Sie werden **nie** committet, **nie** zu GitHub gepusht und **nie** deployed. Dasselbe gilt für Backups (DB-Dumps, `*.sql`, `*.sql.gz`, `BACKUPS/`) und sensible Daten (`.env*` außer `.env.example`, Tokens, Keys, Zugangsdaten) — sie verlassen niemals die lokale Maschine.
+- **Branch-Disziplin:** Play-Test-Arbeit findet in lokalen Branches statt (z. B. `PlayTest*`), die **nie** gepusht werden. Nur den vereinbarten Hauptbranch (i. d. R. `main`) pushen; **niemals** `git push --all` oder `git push --mirror`. Geht versehentlich ein Play-Test-Branch nach GitHub, dort wieder entfernen.
+- Sorge dafür, dass `PLAYTEST/` (bzw. `PlayTest/`), `BACKUPS/`, `*.sql`/`*.sql.gz` und `.env*` (außer `.env.example`) in `.gitignore` stehen. Wenn das Projekt bereits `PlayTest/` nutzt, respektiere die bestehende Struktur.
 - Keine produktiven Schreibaktionen ohne Backup, Rückbauplan und klare Testdaten.
 - Keine echten Zahlungsflüsse, Massenmails, Löschungen, Rollenänderungen oder externen Nebenwirkungen ohne ausdrückliche Freigabe und Sandbox.
 - Live-Testdaten am Ende zurückbauen und den Rückbau prüfen.

@@ -2,6 +2,16 @@
 
 Der PlayTest-Skill soll beim Testen helfen, ohne sensible Daten zu verbreiten.
 
+## Lokal-only (oberste Regel)
+
+Playtests, Backups und sensible Daten dürfen **niemals** die lokale Maschine verlassen — weder nach GitHub noch nach Live:
+
+- **Play-Test-Branches und -Artefakte** (`PLAYTEST/`, `PlayTest/`, Protokolle, Screenshots) bleiben lokal. Nie committen, nie pushen, nie deployen.
+- **Backups** (DB-Dumps, `*.sql`, `*.sql.gz`, `BACKUPS/`) bleiben lokal. Nie nach GitHub, nie in den Webroot/Live.
+- **Sensible Daten** (`.env*` außer `.env.example`, Tokens, API-Keys, Passwörter, Keys, Zugangsdaten) bleiben lokal und gehören in `.gitignore`.
+- **Branch-Disziplin:** Play-Test-Branches (`PlayTest*`) werden nie gepusht. Nur den Hauptbranch (`main`) pushen, **niemals** `git push --all`/`--mirror`. Landet versehentlich ein Play-Test-Branch auf GitHub, dort wieder löschen.
+- Wer den DEV-Skill nutzt: dessen Pre-Push-Hook (`dev/hooks/pre-push`) blockiert solche Pushes technisch — empfohlen zur Installation.
+
 ## Niemals protokollieren
 
 - Passwörter

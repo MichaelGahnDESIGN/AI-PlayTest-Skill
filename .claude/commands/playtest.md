@@ -27,7 +27,7 @@ Wenn das Script nicht verfügbar ist, lege die Struktur manuell an.
 ## Sicherheitsregeln
 
 - Keine Secrets, Tokens, Passwörter oder personenbezogenen Daten in Testdateien schreiben.
-- `PLAYTEST/` muss lokal bleiben und in `.gitignore` stehen.
+- **Lokal-only:** `PLAYTEST/`, Play-Test-Branches (`PlayTest*`) und Backups bleiben **lokal** — nie committen, nie zu GitHub pushen, nie deployen. `PLAYTEST/`, `BACKUPS/`, `*.sql*` und `.env*` (außer `.env.example`) müssen in `.gitignore` stehen. Nur `main` pushen, niemals `git push --all`.
 - Schreibe keine produktiven Daten, wenn der Nutzer keinen Live-Test verlangt hat.
 
 ## Ergebnis
